@@ -14,6 +14,12 @@ void bubble_sort(int *array, size_t size)
 	int flag, temp_actual = 0;
 	size_t i;
 
+	/* Verify if array and size exists*/
+	if (!array || !size)
+	{
+		return;
+	}
+
 	flag = 1;
 	for (i = 0; flag == 1; i++)
 	{
