@@ -14,11 +14,6 @@ int lomuto_partition(int *array, int low, int high, size_t size)
 {
 	int pivot, i, j, temporal;
 
-	if (array == NULL || size < 2)
-	{
-		return;
-	}
-
 	pivot = array[high];
 	i = low - 1;
 	for (j = low; j < high; j++)
@@ -60,11 +55,6 @@ int lomuto_partition(int *array, int low, int high, size_t size)
 void sort(int *array, int low, int high, size_t size)
 {
 	int partition;
-
-	if (array == NULL || size < 2)
-	{
-		return;
-	}
 
 	if (low < high)
 	{
