@@ -21,11 +21,11 @@ int lomuto_partition(int *array, int low, int high, size_t size)
 		if (array[j] <= pivot)
 		{
 			i++;
-			temporal = array[i];
-			array[i] = array[j];
-			array[j] = temporal;
-			if (array[j] >= pivot)
+			if (array[i] >= pivot)
 			{
+				temporal = array[i];
+				array[i] = array[j];
+				array[j] = temporal;
 				print_array(array, size);
 			}
 		}
