@@ -24,16 +24,20 @@ int lomuto_partition(int *array, int low, int high, size_t size)
 			temporal = array[i];
 			array[i] = array[j];
 			array[j] = temporal;
-			if (i != j && i == high)
+			if (array[j] >= pivot)
+			{
 				print_array(array, size);
+			}
 		}
 	}
 
 	temporal = array[i + 1];
 	array[i + 1] = array[high];
 	array[high] = temporal;
-	if (i != high || i == j)
+	if (array[j] != pivot)
+	{
 		print_array(array, size);
+	}
 
 	return (i + 1);
 }
