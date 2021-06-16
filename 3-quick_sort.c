@@ -56,7 +56,7 @@ void sort(int *array, int low, int high, size_t size)
 {
 	int partition;
 
-	if (low < high)
+	if (low < high && size >= 2)
 	{
 		partition = lomuto_partition(array, low, high, size);
 		sort(array, low, partition - 1, size);
