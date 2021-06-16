@@ -62,6 +62,11 @@ void sort(int *array, int low, int high, size_t size)
 		sort(array, low, partition - 1, size);
 		sort(array, partition + 1, high, size);
 	}
+
+	else
+	{
+		return;
+	}
 }
 
 /**
