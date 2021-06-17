@@ -21,7 +21,7 @@ int lomuto_partition(int *array, int low, int high, size_t size)
 		if (array[j] <= pivot)
 		{
 			i++;
-			if (array[i] >= pivot)
+			if (array[i] > pivot)
 			{
 				temporal = array[i];
 				array[i] = array[j];
